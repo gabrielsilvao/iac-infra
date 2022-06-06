@@ -1,15 +1,13 @@
 #!/bin/bash
-
-echo -n "id: "
+echo "## SETTING AWS CREDENTIALS ##"
+echo -n "Access Key ID: "
 read ID
 
-echo -n "secret: "
+sed -i -e "s#id-key#${ID}#g" terraform/1-versions.tf
+
+echo -n "Secret Access Key: "
 read SECRET
 
-echo -n "region: "
-read REGION
-
-sed -i "s/id-key/$ID/g" terraform/1-versions.tf
-sed -i "s/secret-key/$SECRET/g" terraform/1-versions.tf
+sed -i -e "s#secret-key#${SECRET}#g" terraform/1-versions.tf
 
 vagrant up
