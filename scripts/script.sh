@@ -1,3 +1,11 @@
+sudo echo "export AWS_ACCESS_KEY_ID=AKIAYX2HUR5RATBEQLLX" >> ~/.profile
+sudo echo "export AWS_SECRET_ACCESS_KEY=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" >> ~/.profile
+sudo echo "export AWS_DEFAULT_REGION=us-east-1" >> ~/.profile
+
+sudo export AWS_ACCESS_KEY_ID=AKIAYX2HUR5RATBEQLLX
+sudo export AWS_SECRET_ACCESS_KEY=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
+sudo export AWS_DEFAULT_REGION=us-east-1
+
 # update and install packages
 sudo apt update \
 && sudo apt install -y awscli wget sudo python3 python3-pip
@@ -12,18 +20,6 @@ sudo python3 -m pip install --user ansible \
 && sudo python3 -m pip install --user paramiko \
 && sudo python3 -m pip install ansible \
 && sudo apt install -y ansible
-
-# aws configure
-echo -n "Input Access Key ID: "
-read AWS_ACCESS_KEY_ID
-echo -n "Input Secret Access Key: "
-read AWS_SECRET_ACCESS_KEY
-echo -n "Input the Default Region: "
-read AWS_DEFAULT_REGION
-
-export AWS_ACCESS_KEY_ID=$AWS_ACCESS_KEY_ID
-export AWS_SECRET_ACCESS_KEY=$AWS_SECRET_ACCESS_KEY
-export AWS_DEFAULT_REGION=$AWS_DEFAULT_REGION
 
 # run terraform
 cd /vagrant/terraform
