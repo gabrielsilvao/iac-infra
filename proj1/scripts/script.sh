@@ -1,11 +1,3 @@
-sudo echo "export AWS_ACCESS_KEY_ID=AKIAYX2HUR5RATBEQLLX" >> ~/.profile
-sudo echo "export AWS_SECRET_ACCESS_KEY=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" >> ~/.profile
-sudo echo "export AWS_DEFAULT_REGION=us-east-1" >> ~/.profile
-
-sudo export AWS_ACCESS_KEY_ID=AKIAYX2HUR5RATBEQLLX
-sudo export AWS_SECRET_ACCESS_KEY=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
-sudo export AWS_DEFAULT_REGION=us-east-1
-
 # update and install packages
 sudo apt update \
 && sudo apt install -y awscli wget sudo python3 python3-pip
